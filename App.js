@@ -4,7 +4,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 
 import Home from "./screens/Home";
-import Details from "./screens/Details";
+import Cam from "./screens/Cam";
 
 const theme = {
   ...DefaultTheme,
@@ -27,7 +27,8 @@ const App = () => {
         initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Cam" component={Cam} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
