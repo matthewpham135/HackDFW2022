@@ -30,8 +30,6 @@ const BackHeader = ({ navigation }) => {
             justifyContent: "center",
             height: "100%",
             width: "15%",
-            backgroundColor: "yellow"
-
         }}>
             <CircleButton
                 imgUrl={assets.left}

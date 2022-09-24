@@ -5,6 +5,7 @@ import { COLORS, SIZES, assets, SHADOWS, FONTS } from "../constants";
 import { CircleButton, RectButton } from "../components/Button"
 import { FocusedStatusBar } from "../components"
 import BackHeader from "../components/BackHeader";
+import ProfileLink from "../components/ProfileLink"
 
 const DetailsHeader = ({ data, navigation }) => (
   <View style={{ width: "100%", height: 373 }}>
@@ -37,7 +38,7 @@ const Profile = ({ route, navigation }) => {
         flex: 1, 
         flexDirection: "column", 
         justifyContent:"flex-start",
-        backgroundColor: "orange"
+
       }}>
       <FocusedStatusBar
         barStyle="dark-content"
@@ -48,7 +49,7 @@ const Profile = ({ route, navigation }) => {
       <BackHeader navigation={navigation} />
 
       <View style={{
-        backgroundColor:"blue",
+
         width: "100%",
         height: "12%",
         display: "flex",
@@ -58,41 +59,69 @@ const Profile = ({ route, navigation }) => {
       }}>      
         <Text style={{
           textAlign: "center",
-          backgroundColor: "red",
+
           fontSize: "40%"
         }}>
           Hi Lisa!
         </Text>
       </View>
       <View style={{
-        backgroundColor:"purple",
+
         width: "100%",
         height: "15%",
-
+        display: "flex",
+        flexDirection: "row",
       }}>
         <Image source={assets.leaf} style={{
-          
+          height: "50%",
+          width: "30%",
+          aspectRatio: 1,
+
         }}/>
         <View style={{
           width: "60%",
-          height: "100%"
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+
         }}>
-          <Text>
-
-          </Text>
-          <Text>
-
-          </Text>
+          <Text style={{textAlign: "left", fontSize: 40}}>340 Kg</Text>
+          <Text style={{textAlign: "lect", fontSize: 25}}>CO2 emission saved</Text>
         </View>
         
       </View>
+      
+      <View style={{
+        width: '100%',
+        height: '20%',
+        display: 'flex',
+        flexDirection: 'row'
+
+      }}>
+        <View style={{ width: '50%', height: '100%', display: 'flex', flexDirection: 'col', justifyContent: 'center'}}>
+          <Text style={{ textAlign: 'center', fontFamily: 'Roboto', fontSize: '30px', color: 'green'}}>2</Text>
+          <Text style={{ textAlign: 'center', fontFamily: 'Roboto', fontSize: '30px'}}>Requested</Text> 
+        </View>
+        <View style={{ width: '50%', height: '100%', display: 'flex', flexDirection: 'col', justifyContent: 'center'}}>
+          <Text style={{ textAlign: 'center', fontFamily: 'Roboto', fontSize: '30px', color: 'green'}}>1</Text>
+          <Text style={{ textAlign: 'center', fontFamily: 'Roboto', fontSize: '30px'}}>Accepted</Text>
+        </View>
+      </View>
 
       <View style={{
-        backgroundColor:"green",
         width: "100%",
-        height: "35%"
+        height: "35%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignContent: "center"
       }}>      
-      
+          <ProfileLink text="Saved Items"/>
+          <ProfileLink text="Purchase History"/>
+          <ProfileLink text="Payments"/>
+          <ProfileLink text="Impact Statement"/>
+          <ProfileLink text="Help"/>
       </View>
 
     </SafeAreaView>
