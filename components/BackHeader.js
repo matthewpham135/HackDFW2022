@@ -5,6 +5,7 @@ import { COLORS, FONTS, SIZES, assets } from "../constants";
 
 import {CircleButton} from "../components/Button"
 import { Directions } from "react-native-gesture-handler";
+import { ImageBackground } from "react-native-web";
 
 
 
@@ -13,7 +14,6 @@ const BackHeader = ({ navigation }) => {
   return (
     <View
       style={{
-        backgroundColor: "red",
         padding: SIZES.font,
         width: "100%",
         height: "15%",
@@ -23,22 +23,25 @@ const BackHeader = ({ navigation }) => {
         justifyContent: "flex-start"
       }}
     >
-    <View style={{
-        display: "flex",
-        flexDirection: "row",
-        alignContent: "center",
-        justifyContent: "center",
-        width: "30%"
+        <View style={{
+            display: "flex",
+            flexDirection: "row",
+            alignContent: "center",
+            justifyContent: "center",
+            height: "100%",
+            width: "15%",
+            backgroundColor: "yellow"
 
-    }}>
-        <CircleButton
-            imgUrl={assets.left}
-            resizeMode="contain"
-            style={{ width: "100%", height: "100%"}}
-            handlePress = {navigation.goBack}
-            backgroundColor = "white"
-        />
-    </View>
+        }}>
+            <CircleButton
+                imgUrl={assets.left}
+                resizeMode="contain"
+                style={{ width: "100%", height: "100%"}}
+                handlePress = { navigation.goBack}
+                backgroundColor = "white"
+            />
+        </View>
+
 
 
     </View>

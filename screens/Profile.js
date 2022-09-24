@@ -46,19 +46,44 @@ const Profile = ({ route, navigation }) => {
       />
 
       <BackHeader navigation={navigation} />
+
       <View style={{
         backgroundColor:"blue",
         width: "100%",
-        height: "12%"
+        height: "12%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignContent: "center"
       }}>      
-      
+        <Text style={{
+          textAlign: "center",
+          backgroundColor: "red",
+          fontSize: "40%"
+        }}>
+          Hi Lisa!
+        </Text>
       </View>
       <View style={{
         backgroundColor:"purple",
         width: "100%",
-        height: "15%"
-      }}>
+        height: "15%",
 
+      }}>
+        <Image source={assets.leaf} style={{
+          
+        }}/>
+        <View style={{
+          width: "60%",
+          height: "100%"
+        }}>
+          <Text>
+
+          </Text>
+          <Text>
+
+          </Text>
+        </View>
         
       </View>
 
