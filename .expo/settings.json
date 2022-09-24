@@ -5,5 +5,6 @@
   "minify": false,
   "urlRandomness": "im-k3s",
   "https": false,
-  "scheme": null
+  "scheme": null,
+  "devClient": false
 }
