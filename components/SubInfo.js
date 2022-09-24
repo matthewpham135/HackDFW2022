@@ -11,18 +11,10 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
           fontFamily: FONTS.semiBold,
           fontSize: titleSize,
           color: COLORS.primary,
+          textAlign: "center",
         }}
       >
         {title}
-      </Text>
-      <Text
-        style={{
-          fontFamily: FONTS.regular,
-          fontSize: subTitleSize,
-          color: COLORS.primary,
-        }}
-      >
-        by {subTitle}
       </Text>
     </View>
   );

@@ -38,7 +38,7 @@ const Home = () => {
             ListHeaderComponent={<HomeHeader onSearch={handleSearch} />}
           />
         </View>
-
+        {/*
         <View
           style={{
             position: "absolute",
@@ -53,6 +53,7 @@ const Home = () => {
             style={{ height: 300, backgroundColor: COLORS.primary }} />
           <View style={{ flex: 1, backgroundColor: COLORS.white }} />
         </View>
+        */}
       </View>
     </SafeAreaView>
   );
