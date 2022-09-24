@@ -3,11 +3,14 @@ import { View, Text, Image, TextInput } from "react-native";
 
 import { COLORS, FONTS, SIZES, assets } from "../constants";
 
-const HomeHeader = ({ onSearch }) => {
+import {CircleButton} from "../components/Button"
+
+
+const HomeHeader = ({ onSearch, navigation }) => {
   return (
     <View
       style={{
-        backgroundColor: "white",
+        backgroundColor: "none",
         padding: SIZES.font,
       }}
     >
@@ -24,10 +27,11 @@ const HomeHeader = ({ onSearch }) => {
           style={{ width: "80%", height: 30}}
         />
         <View style={{ width: 45, height: 45 }}>
-          <Image
-            source={assets.person01}
+          <CircleButton
+            imgUrl={assets.person01}
             resizeMode="contain"
             style={{ width: "100%", height: "100%"}}
+            handlePress = {() => {navigation.navigate('Profile', {})} }
           />
         </View>
       </View>
