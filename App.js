@@ -5,6 +5,7 @@ import { useFonts } from "expo-font";
 
 import Home from "./screens/Home";
 import Profile from "./screens/Profile"
+import ImageSelector from "./screens/ImagePicker";
 
 
 const theme = {
@@ -27,6 +28,7 @@ const App = () => {
         }}
         initialRouteName="Home"
       >
+        <Stack.Screen name="ImageSelector" component={ImageSelector}/>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
